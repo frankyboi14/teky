@@ -1,7 +1,7 @@
 # bài 2
-print("Vừng ơi ... mở ra", end=" ")
+print("Vừng ơi ... mở ra")
 while True:
-    inp = input()
+    inp = input(">>> ")
     if inp == "python":
         break
     else:
