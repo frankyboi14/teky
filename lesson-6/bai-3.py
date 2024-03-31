@@ -1,31 +1,45 @@
-# bài 1
-def is_prime(n):
-    prime = True
-    if n <= 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            prime = False
-            break
-    return prime
+# bài 3 - quiz
+def get_answer(text):
+    print(text)
+    while True:
+        inp = input(">>> ")
+        if inp.lower() in ("a", "b", "c", "d"):
+            return inp.lower()
+        print("Nhập A, B, C hoặc D")
 
-while True:
-    try:
-        inp = input("Các số nguyên tố từ 1 đến: ")
-        inp = int(inp)
-        break
-    except:
-        print("Hãy nhập một số nguyên.")
+cau1 = get_answer(
+"""Python phát hành năm nào?
+    A. 1991
+    B. 1989
+    C. 2020
+    D. 2001"""
+) == "a"
 
-for i in range(inp + 1):
-    print(i, "\t", "là" if is_prime(i) else "không phải là", "số nguyên tố")
+cau2 = get_answer(
+"""Ai đã tạo ra Python?
+    A. Steve Jobs
+    B. Dennis Ritchie
+    C. Guido van Rossum
+    D. James Gosling"""
+) == "c"
 
-# bài 2
-print("Vừng ơi ... mở ra", end=" ")
-while True:
-    inp = input()
-    if inp == "python":
-        break
-    else:
-        print("Mật khẩu không đúng!")
-print("Xin chào!")
+cau3 = get_answer(
+"""In ra 'Hello world' trong Python như thế nào?
+    A. System.out.println('Hello world')
+    B. print('Hello world')
+    C. console.log('Hello world')
+    D. puts 'Hello world'"""
+) == "b"
+
+cau4 = get_answer(
+"""Trong Python, in ra (0.1 + 0.2) sẽ ra cái gì?
+    A. 0.3
+    B. 3/10
+    C. 0.1 + 0.2
+    D. 0.30000000000000004"""
+) == "d"
+
+sum = (cau1 + cau2 + cau3 + cau4)
+print(f"Câu trả lời đúng: {sum}/4")
+if sum == 4:
+    print("Hoan hô! Bạn trả lời đúng hết!")

@@ -19,13 +19,3 @@ while True:
 
 for i in range(inp + 1):
     print(i, "\t", "là" if is_prime(i) else "không phải là", "số nguyên tố")
-
-# bài 2
-print("Vừng ơi ... mở ra", end=" ")
-while True:
-    inp = input()
-    if inp == "python":
-        break
-    else:
-        print("Mật khẩu không đúng!")
-print("Xin chào!")
